@@ -135,13 +135,13 @@ void writeStateValueToGPIO(StaticJsonDocument<200> jsonDoc) {
     int cvalue = jsonDoc[i]["cvalue"];
     // Check the cid value and write the corresponding cvalue to the appropriate GPIO pin
     if (cid == "iotsw1") {
-      digitalWrite(1, cvalue);
+      digitalWrite(LED1, cvalue);
     } else if (cid == "iotsw2") {
-      digitalWrite(2, cvalue);
+      digitalWrite(LED2, cvalue);
     } else if (cid == "iotsw3") {
-      digitalWrite(3, cvalue);
+      digitalWrite(LED3, cvalue);
     } else if (cid == "iotsw4") {
-      digitalWrite(4, cvalue);
+      digitalWrite(LED4, cvalue);
     }
   }
 }
